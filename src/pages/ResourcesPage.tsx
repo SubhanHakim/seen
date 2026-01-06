@@ -56,7 +56,7 @@ const ResourcesPage: React.FC = () => {
                     >
                         {/* X (Twitter) Card */}
                         <a
-                            href="https://x.com/Noxie_world"
+                            href="https://x.com/seen_universal"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative p-8 md:p-12 border border-white/20 rounded-2xl bg-gradient-to-br from-white/5 to-[#4FFFB0]/5 hover:from-white/10 hover:to-[#4FFFB0]/10 transition-all duration-500 flex flex-col md:flex-row md:items-center justify-between gap-6 overflow-hidden"
