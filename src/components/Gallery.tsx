@@ -1,58 +1,53 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-const GalleryItem: React.FC<{ src: string, title: string, subtitle: string }> = ({ src, title, subtitle }) => {
-    return (
-        <div className="group relative aspect-[3/4] overflow-hidden bg-white/5 cursor-none">
-            <img src={src} alt={title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale hover:grayscale-0" />
-
-            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-4 text-center">
-                <h3 className="font-display text-2xl text-white mb-2 tracking-wider translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{title}</h3>
-                <p className="font-mono text-neon text-xs tracking-widest translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">{subtitle}</p>
-            </div>
-        </div>
-    )
-}
+import entity1 from '../assets/character/entity_1.png';
+import entity2 from '../assets/character/entity_2.png';
+import entity3 from '../assets/character/entity_3.png';
+import entity4 from '../assets/character/entity_4.png';
 
 const Gallery: React.FC = () => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
     const x = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
 
-    // Placeholder images - using simple colored divs or placeholders for now as we don't have many assets
-    // In a real scenario, these would be high-res renders.
     const items = [
-        { title: 'The Shell', subtitle: 'Empty Vessel', color: '#1a1a1a' },
-        { title: 'Neural Web', subtitle: 'First Connection', color: '#2a2a2a' },
-        { title: 'The Glitch', subtitle: 'Awakening', color: '#0f0f0f' },
-        { title: 'Obsidian', subtitle: 'Hardened Core', color: '#000000' },
+        { title: 'The Observer', subtitle: 'Watching The Void', img: entity1 },
+        { title: 'Signal Tracer', subtitle: 'Decoded Pattern', img: entity2 },
+        { title: 'Voidwalker', subtitle: 'Between Layers', img: entity3 },
+        { title: 'Sentinel', subtitle: 'Guardian of Noise', img: entity4 },
     ];
 
     return (
-        <section ref={ref} className="py-32 border-t border-white/5 bg-[#050505] overflow-hidden">
-            <div className="container mx-auto px-6 mb-12 flex justify-between items-end">
+        <section ref={ref} className="py-32 overflow-hidden relative z-10">
+            <div className="w-full px-10 md:px-48 mb-12 flex justify-between items-end">
                 <h2 className="text-4xl md:text-6xl font-display uppercase opacity-80">
-                    Visual <br /> <span className="text-neon">Archive</span>
+                    Visual <br /> <span className="text-[#4FFFB0]">Archive</span>
                 </h2>
                 <span className="font-mono text-xs text-white/40">SCROLL TO EXPLORE -&gt;</span>
             </div>
 
-            <motion.div style={{ x }} className="flex gap-8 px-6 w-max">
+            <motion.div style={{ x }} className="flex gap-8 px-10 md:px-48 w-max">
                 {items.map((item, i) => (
                     <div key={i} className="w-[300px] md:w-[400px] flex-shrink-0">
-                        {/* Simulating images with styled divs for this demo since we lack assets */}
-                        <div className="group relative aspect-[3/4] overflow-hidden bg-white/5 border border-white/10 hover:border-neon/50 transition-colors duration-500">
-                            <div className="absolute inset-0 bg-gradient-to-br from-black via-transparent to-black opacity-80" />
-                            <div className="w-full h-full relative p-8 flex flex-col justify-between">
-                                <span className="font-mono text-neon/50 text-xs">FIG_0{i + 1}</span>
-                                <div className="space-y-2">
-                                    <h3 className="font-display text-3xl text-white">{item.title}</h3>
-                                    <p className="font-mono text-xs text-gray-500">{item.subtitle}</p>
-                                </div>
-                            </div>
+                        <div className="group relative aspect-[3/4] overflow-hidden bg-white/5 border border-white/10 hover:border-[#4FFFB0] transition-all duration-500 cursor-none rounded-sm">
 
-                            {/* Abstract visual content */}
-                            <div className="absolute inset-0 -z-10 opacity-30 group-hover:opacity-60 transition-opacity duration-700 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black" />
+                            {/* Image */}
+                            <img
+                                src={item.img}
+                                alt={item.title}
+                                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
+                            />
+
+                            {/* Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                            {/* Content */}
+                            <div className="absolute bottom-0 left-0 w-full p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <span className="font-mono text-[#4FFFB0] text-xs mb-2 block tracking-widest">FIG_0{i + 1}</span>
+                                <h3 className="font-display text-3xl text-white mb-1 uppercase tracking-wide">{item.title}</h3>
+                                <p className="font-mono text-xs text-gray-400 uppercase tracking-wider">{item.subtitle}</p>
+                            </div>
                         </div>
                     </div>
                 ))}
