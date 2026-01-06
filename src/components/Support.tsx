@@ -7,12 +7,15 @@ import sup1 from '../assets/support/entity1.png';
 import sup2 from '../assets/support/entity2.png';
 import sup3 from '../assets/support/entity3.png';
 import sup4 from '../assets/support/entity4.png';
+import sup5 from '../assets/support/entity5.png';
 
 const supporters = [
     { name: 'Deeban', handle: '@deeban', url: 'https://x.com/deeban', img: sup1, role: 'Architect' },
     { name: 'Nuropus', handle: '@nuropus', url: 'https://x.com/nuropus', img: sup2, role: 'Operator' },
     { name: 'VeryVanya', handle: '@veryvanya', url: 'https://x.com/veryvanya', img: sup3, role: 'Strategist' },
     { name: 'Clarence Liu', handle: '@clarenceliu', url: 'https://x.com/clarenceliu', img: sup4, role: 'Observer' },
+    { name: "Lowkey (opus/acc)", handle: "@Lowkeyyrzs", url: "https://x.com/lowkeyyrzs", img: sup5, role: "Observer" },
+    { name: "John", handle: "@JBWilkiedotdev", url: "https://x.com/jbwilkiedotdev", img: sup5, role: "Developer" },
 ];
 
 const Support: React.FC = () => {
