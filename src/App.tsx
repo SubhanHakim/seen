@@ -11,6 +11,7 @@ import Support from './components/Support';
 import Footer from './components/Footer';
 import LorePage from './pages/LorePage';
 import ResourcesPage from './pages/ResourcesPage';
+import SoundController from './components/SoundController';
 
 const Home = () => (
   <main className="relative z-10 w-full overflow-hidden">
@@ -67,6 +68,9 @@ function App() {
         <div className="noise-overlay" />
         <div className="vignette" />
         <DynamicBackground />
+
+        {/* Audio System */}
+        <SoundController />
 
         {/* Navigation */}
         <Navbar />
