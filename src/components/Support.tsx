@@ -13,7 +13,7 @@ import sup6 from '../assets/support/entity6.png';
 const supporters = [
     { name: 'Deeban', handle: '@deeban', url: 'https://x.com/deeban', img: sup1, role: 'Architect' },
     { name: 'Nuropus', handle: '@nuropus', url: 'https://x.com/nuropus', img: sup2, role: 'Operator' },
-    { name: 'VeryVanya', handle: '@veryvanya', url: 'https://x.com/veryvanya', img: sup3, role: 'Strategist' },
+    { name: 'veryvanya (opus/acc)', handle: '@veryvanya', url: 'https://x.com/veryvanya', img: sup3, role: 'Strategist' },
     { name: 'Clarence Liu', handle: '@clarenceliu', url: 'https://x.com/clarenceliu', img: sup4, role: 'Observer' },
     { name: "Lowkey (opus/acc)", handle: "@Lowkeyyrzs", url: "https://x.com/lowkeyyrzs", img: sup5, role: "Observer" },
     { name: "John", handle: "@JBWilkiedotdev", url: "https://x.com/jbwilkiedotdev", img: sup6, role: "Developer" },
@@ -50,7 +50,7 @@ const Support: React.FC = () => {
                 </div>
 
                 {/* Supporters Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {supporters.map((item, i) => (
                         <motion.a
                             key={i}
