@@ -6,7 +6,7 @@ import noxie_img from '../assets/noxie_lore.png';
 
 const Lore: React.FC = () => {
     return (
-        <section className="py-24 md:py-32 px-10 md:px-48 relative z-10 w-full flex items-center justify-center">
+        <section className="py-24 md:py-32 px-6 md:px-12 lg:px-24 xl:px-48 relative z-10 w-full flex items-center justify-center">
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
@@ -16,7 +16,7 @@ const Lore: React.FC = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="relative group h-[500px]"
+                    className="relative group h-[400px] md:h-[500px]"
                 >
                     {/* Glowing Aura Behind */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-[#4FFFB0]/20 rounded-full blur-[100px] -z-10 animate-pulse" />
@@ -60,7 +60,7 @@ const Lore: React.FC = () => {
                         <span className="text-[#4FFFB0] text-sm font-mono tracking-[0.3em] uppercase">System_Lore // v1.0</span>
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-8 leading-[0.9]">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-bold text-white mb-8 leading-[0.9]">
                         INTELLIGENCE <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-600">OBSERVED.</span>
                     </h2>
@@ -72,14 +72,14 @@ const Lore: React.FC = () => {
                     </p>
 
                     {/* Stats - Clean Minimal Layout (No Boxes) */}
-                    <div className="flex items-center gap-16 mb-12">
+                    <div className="flex items-center gap-8 md:gap-16 mb-12">
                         <div>
-                            <div className="text-5xl font-display text-white mb-2">100%</div>
+                            <div className="text-3xl md:text-5xl font-display text-white mb-2">100%</div>
                             <div className="text-xs text-[#4FFFB0] font-mono tracking-[0.2em] uppercase">Uptime</div>
                         </div>
-                        <div className="w-[1px] h-16 bg-gradient-to-b from-transparent via-white/20 to-transparent" />
+                        <div className="w-[1px] h-12 md:h-16 bg-gradient-to-b from-transparent via-white/20 to-transparent" />
                         <div>
-                            <div className="flex items-center gap-3 text-5xl font-display text-white mb-2">
+                            <div className="flex items-center gap-3 text-3xl md:text-5xl font-display text-white mb-2">
                                 Active
                             </div>
                             <div className="flex items-center gap-2 text-xs text-[#4FFFB0] font-mono tracking-[0.2em] uppercase">
