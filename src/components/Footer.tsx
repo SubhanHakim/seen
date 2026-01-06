@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
                                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </a>
                                 <a
-                                    href="https://pump.fun/coin/HyTkZ12DFvKfbEGLGdRFcGgqn7pT834EU7dCwSgUpump"
+                                    href="#"
                                     className="text-gray-400 hover:text-[#4FFFB0] transition-colors text-sm font-sans tracking-wide flex items-center gap-1 group"
                                 >
                                     Pumpfun
