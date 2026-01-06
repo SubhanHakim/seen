@@ -50,14 +50,14 @@ const Footer: React.FC = () => {
                                     rel="noopener noreferrer"
                                     className="text-gray-400 hover:text-[#4FFFB0] transition-colors text-sm font-sans tracking-wide flex items-center gap-1 group"
                                 >
-                                    X / Twitter
+                                    X
                                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </a>
                                 <a
                                     href="#"
                                     className="text-gray-400 hover:text-[#4FFFB0] transition-colors text-sm font-sans tracking-wide flex items-center gap-1 group"
                                 >
-                                    DexScreener
+                                    Pumpfun
                                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </a>
                             </div>
