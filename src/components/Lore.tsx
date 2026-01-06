@@ -56,9 +56,11 @@ const Lore: React.FC = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="flex flex-col justify-center"
                 >
-                    <div className="flex items-center gap-3 mb-6">
-                        <div className="w-12 h-[2px] bg-[#4FFFB0]" />
-                        <span className="text-[#4FFFB0] text-sm font-mono tracking-[0.3em] uppercase">System_Lore // v1.0</span>
+                    <div className="mb-6">
+                        <div className="w-12 h-1 bg-[#4FFFB0] mb-4" /> {/* Top Accent Line */}
+                        <span className="text-[#4FFFB0] text-sm font-mono tracking-[0.3em] uppercase block">
+                            System_Lore // v1.0
+                        </span>
                     </div>
 
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-bold text-white mb-8 leading-[0.9]">

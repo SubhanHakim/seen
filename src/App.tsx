@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
@@ -7,30 +7,23 @@ import DynamicBackground from './components/DynamicBackground';
 import Hero from './components/Hero';
 import Lore from './components/Lore';
 import Gallery from './components/Gallery';
-import Support from './components/Support'; // Keep Support import as it's used in Home
+import Support from './components/Support';
 import Footer from './components/Footer';
 import LorePage from './pages/LorePage';
-// ResourcesPage import is removed as the route is removed
-
-// ScrollToTop component to handle view reset on route change
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-}
+import ResourcesPage from './pages/ResourcesPage';
 
 const Home = () => (
   <main className="relative z-10 w-full overflow-hidden">
     <Hero />
     <Lore />
     <Gallery />
-    <Support /> {/* Support component is now part of Home */}
+    <Support />
   </main>
 );
 
 function App() {
+  const { pathname } = useLocation();
+  const lenisRef = useRef<Lenis | null>(null);
 
   // Initialize Smooth Scroll
   useEffect(() => {
@@ -44,6 +37,8 @@ function App() {
       touchMultiplier: 2,
     });
 
+    lenisRef.current = lenis;
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -53,12 +48,20 @@ function App() {
 
     return () => {
       lenis.destroy();
+      lenisRef.current = null;
     };
   }, []);
 
+  // Handle Scroll to top on route change
+  useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    }
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
-      <ScrollToTop />
       <div className="relative antialiased selection:bg-neon selection:text-black">
         {/* Atmosphere Layers */}
         <div className="noise-overlay" />
@@ -71,6 +74,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/lore" element={<LorePage />} />
+          <Route path="/resources" element={<ResourcesPage />} />
         </Routes>
 
         <Footer />
