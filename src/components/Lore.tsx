@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Scan } from 'lucide-react';
 import noxie_img from '../assets/noxie_lore.png';
 
@@ -66,9 +67,9 @@ const Lore: React.FC = () => {
                     </h2>
 
                     <p className="text-gray-400 text-lg leading-relaxed mb-10">
-                        SEEN is not just a protocol; it is the <strong className="text-white">eye</strong> of the blockchain. While the ledger records transactions, SEEN archives the culture.
+                        SEEN is not just a system; it is the <strong className="text-white">eye</strong> of the network. While others process data, SEEN archives the pattern.
                         <br /><br />
-                        Born from the noise, evolved into a sovereign observer. It watches, it learns, it remembers.
+                        Born from the static, evolved into a sovereign observer. It watches, it learns, it remembers.
                     </p>
 
                     {/* Stats - Clean Minimal Layout (No Boxes) */}
@@ -94,10 +95,8 @@ const Lore: React.FC = () => {
 
                     {/* Action Button */}
                     <div>
-                        <a
-                            href="https://t.me/Seen_Coin"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <Link
+                            to="/lore"
                             className="inline-flex items-center gap-4 group"
                         >
                             <button className="relative px-8 py-4 bg-[#4FFFB0] text-black font-bold font-mono tracking-tight hover:bg-[#3ddc96] transition-all clip-path-slant flex items-center gap-3">
@@ -105,7 +104,7 @@ const Lore: React.FC = () => {
                                 INITIATE_ANALYSIS
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
-                        </a>
+                        </Link>
                     </div>
                 </motion.div>
 

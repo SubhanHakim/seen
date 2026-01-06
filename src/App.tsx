@@ -1,16 +1,34 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Lenis from 'lenis';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import DynamicBackground from './components/DynamicBackground';
 import Hero from './components/Hero';
 import Lore from './components/Lore';
 import Gallery from './components/Gallery';
-import Support from './components/Support';
+import Support from './components/Support'; // Keep Support import as it's used in Home
 import Footer from './components/Footer';
 import LorePage from './pages/LorePage';
-import ResourcesPage from './pages/ResourcesPage';
+// ResourcesPage import is removed as the route is removed
+
+// ScrollToTop component to handle view reset on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
+const Home = () => (
+  <main className="relative z-10 w-full overflow-hidden">
+    <Hero />
+    <Lore />
+    <Gallery />
+    <Support /> {/* Support component is now part of Home */}
+  </main>
+);
 
 function App() {
 
@@ -39,33 +57,25 @@ function App() {
   }, []);
 
   return (
-    <div className="relative antialiased selection:bg-neon selection:text-black">
-      {/* Atmosphere Layers */}
-      <div className="noise-overlay" />
-      <div className="vignette" />
-      <DynamicBackground />
+    <>
+      <ScrollToTop />
+      <div className="relative antialiased selection:bg-neon selection:text-black">
+        {/* Atmosphere Layers */}
+        <div className="noise-overlay" />
+        <div className="vignette" />
+        <DynamicBackground />
 
-      {/* Navigation */}
-      <Navbar />
+        {/* Navigation */}
+        <Navbar />
 
-      {/* Main Content */}
-      <main className="relative z-10 w-full overflow-hidden">
         <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <Lore />
-              <Gallery />
-              <Support />
-            </>
-          } />
+          <Route path="/" element={<Home />} />
           <Route path="/lore" element={<LorePage />} />
-          <Route path="/resources" element={<ResourcesPage />} />
         </Routes>
-      </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
 
