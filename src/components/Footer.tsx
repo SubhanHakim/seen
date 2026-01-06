@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                             <div className="flex flex-col gap-4">
                                 <h3 className="text-gray-600 text-xs font-mono uppercase tracking-widest mb-2">Connect</h3>
                                 <a
-                                    href="https://x.com/Noxie_world"
+                                    href="https://x.com/seen_universal"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-400 hover:text-[#4FFFB0] transition-colors text-sm font-sans tracking-wide flex items-center gap-1 group"

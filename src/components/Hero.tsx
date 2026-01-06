@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
                     {/* CTAs */}
                     <div className="flex items-center gap-4 md:gap-6 mt-2">
                         <a
-                            href="https://x.com/Noxie_world"
+                            href="https://x.com/seen_universal"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#4FFFB0]/50 transition-all duration-300 overflow-hidden"
