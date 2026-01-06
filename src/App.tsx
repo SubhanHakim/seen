@@ -7,6 +7,7 @@ import DynamicBackground from './components/DynamicBackground';
 import Hero from './components/Hero';
 import Lore from './components/Lore';
 import Gallery from './components/Gallery';
+import Support from './components/Support';
 import Footer from './components/Footer';
 import LorePage from './pages/LorePage';
 import ResourcesPage from './pages/ResourcesPage';
@@ -55,6 +56,7 @@ function App() {
               <Hero />
               <Lore />
               <Gallery />
+              <Support />
             </>
           } />
           <Route path="/lore" element={<LorePage />} />
