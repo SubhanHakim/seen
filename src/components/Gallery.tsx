@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-import entity1 from '../assets/character/entity_1.png';
-import entity2 from '../assets/character/entity_2.png';
-import entity3 from '../assets/character/entity_3.png';
-import entity4 from '../assets/character/entity_4.png';
+import entity1 from '../assets/character/entity_1.webp';
+import entity2 from '../assets/character/entity_2.webp';
+import entity3 from '../assets/character/entity_3.webp';
+import entity4 from '../assets/character/entity_4.webp';
 
 const Gallery: React.FC = () => {
     const ref = useRef(null);

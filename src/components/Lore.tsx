@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Scan } from 'lucide-react';
-import noxie_img from '../assets/noxie_lore.png';
+import noxie_img from '../assets/noxie_lore.webp';
 
 const Lore: React.FC = () => {
     return (

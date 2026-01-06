@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
             >
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-[#030303] z-10" />
                 <div className="absolute inset-0 bg-black/20 z-10" /> {/* General dimming */}
-                <img src="/seen.png" alt="SEEN" className="w-full h-full object-cover grayscale-[30%] contrast-110" />
+                <img src="/seen.webp" alt="SEEN" className="w-full h-full object-cover grayscale-[30%] contrast-110" />
             </motion.div>
 
             {/* Content */}
