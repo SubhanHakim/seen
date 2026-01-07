@@ -106,7 +106,7 @@ const ResourcesPage: React.FC = () => {
                             </p>
 
                             <a
-                                href="https://pump.fun/coin/4XqrFYxFidNi4cSewMgnzDzqhKWigVumKixo8rQ1pump"
+                                href="#"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-3 px-8 py-4 border border-[#4FFFB0]/30 rounded-full text-[#4FFFB0] hover:bg-[#4FFFB0] hover:text-black transition-all duration-300 font-mono tracking-widest text-sm uppercase group w-max"
