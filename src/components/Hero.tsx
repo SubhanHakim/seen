@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
                         </a>
 
                         <a
-                            href="#"
+                            href="https://pump.fun/?tab=market_cap&q=9Lpd2wN89ju1KyRfuom1skBkfp5ab1mwjfLhoQXGpump"
                             className="group relative px-8 py-3 bg-[#4FFFB0] border border-[#4FFFB0] hover:bg-[#4FFFB0]/90 transition-all duration-300 shadow-[0_0_20px_rgba(79,255,176,0.3)] hover:shadow-[0_0_30px_rgba(79,255,176,0.5)] flex items-center gap-3"
                         >
                             {/* DexScreener Icon */}
